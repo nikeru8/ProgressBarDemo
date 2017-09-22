@@ -18,6 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
             android:layout_weight="9" />
 
         <TextView
@@ -31,14 +32,42 @@
 
     </LinearLayout>
 
-    <Button
-        android:onClick="increasing"
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/bar_layout"
+        android:layout_marginTop="20dp"
+        android:background="#ffaa" />
+
+    <TextView
+        android:id="@+id/show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bar_layout"
+        android:layout_below="@+id/line"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="增加10" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="time" />
+
+    <Button
+        android:id="@+id/show_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="timePickerBtn"
+        android:text="picker" />
+
+    <Button
+        android:onClick="canelTimeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_picker"
+        android:layout_centerHorizontal="true"
+        android:text="取消時間" />
 
 
 </RelativeLayout>
